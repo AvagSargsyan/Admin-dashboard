@@ -120,7 +120,7 @@ img {
 }
 
 .search-row .icons img {
-    height: 3.8rem;
+    height: 3.4rem;
     width: auto;
 }
 .main-row {
@@ -218,5 +218,45 @@ img {
 .trending h2 {
     padding: 1.8rem 0 .6rem 0;
     font-size: 1.3rem;
+}
+
+.trending-content {
+    background-color: #fff;
+    margin-right: 1rem;
+    border-radius: .6rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.trending-content img {
+    height: 3.4rem;
+}
+
+.trending-content > div {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 4fr;
+    grid-template-areas: 
+    "img heading"
+    "img content";
+    align-items: center;
+}
+
+.trending-content div img {
+    grid-area: img;
+}
+
+.trending-content div h4 {
+    grid-area: heading;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.trending-content div p {
+    grid-area: content;
+    font-size: .9rem;
+    color: gray;
 }
 /* trending-end */
