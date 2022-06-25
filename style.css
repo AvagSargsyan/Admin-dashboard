@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr 2fr 2fr / 1fr 3fr 1fr;
+    grid-template-areas: 
+    "sidebar header header"
+    "sidebar main announcements"
+    "sidebar main trending";
+}
+
+/* sidebar-start */
+.sidebar {
+    background-color: rgb(54, 159, 230);
+    color: white;
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: 1fr 4fr 4fr;
+    padding: 1rem;
+    align-items: baseline;
+}
+
+.sidebar div h2 {
+    display: inline;
+    padding-left: 1rem;
+    font-size: 1.3rem;
+}
+
+.sidebar div > div {
+    padding: .6rem 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar a:hover {
+    color: #eee;
+}
+
+.sidebar svg {
+    color: white;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .4rem;
+}
+
+.dashboard h1 {
+    font-size: 1.6rem;
+}
+
+.dashboard svg {
+    height: 2.6rem;
+}
+/* sidebar-end */
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
+}
