@@ -6,7 +6,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
 .wrapper {
     height: 100vh;
     display: grid;
@@ -17,9 +16,14 @@
     "sidebar main trending";
 }
 
+img {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 /* sidebar-start */
 .sidebar {
-    background-color: rgb(54, 159, 230);
+    background-color: rgb(24, 147, 230);
     color: white;
     grid-area: sidebar;
     display: grid;
@@ -67,9 +71,101 @@
 }
 /* sidebar-end */
 
+/* header-start */
 .header {
     grid-area: header;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: .4rem 2rem;
 }
+
+.header .search-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 6rem;
+}
+
+.header .search-row .searchbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-row #search {
+    background-color: rgb(217, 217, 219);
+    height: 1.8rem;
+    border: none;
+    border-radius: 1rem;
+    flex: 1;
+    padding: 0 0.6rem;
+    font-size: 1rem;
+}
+
+.search-row .icons svg, .icons img, .icons span {
+    cursor: pointer;
+}
+
+.search-row .searchbar #search:hover {
+    background-color: rgb(207, 207, 209);
+}
+
+.search-row .icons {
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr;
+    align-items: center;
+    gap: .4rem;
+    font-weight: bold;
+}
+
+.search-row .icons img {
+    height: 3.8rem;
+    width: auto;
+}
+.main-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-row .profile {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.main-row .profile img {
+    height: 5rem;
+    width: auto;
+}
+
+.main-row .profile .hi {
+    font-size: .9rem;
+}
+
+.main-row .profile .name {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.main-row .nav-buttons {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.main-row button {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgb(24, 147, 230);;
+    border: none;
+    padding: .6rem 1.6rem;
+    color: white;
+    border-radius: 2rem;
+}
+
+.main-row button:hover {
+    background-color: rgb(12, 116, 185);
+}
+/* header-end */
 
 .main {
     grid-area: main;
